@@ -5,16 +5,7 @@ import requests
 from PIL import Image
 import io
 
-github_raw_file_url = 'https://github.com/EliteB0Y/CS-FastAPI/releases/download/Files/captcha_model.pt'
-local_file_path = 'captcha_model.pt'
-
-print("Getting the model from github...")
-response = requests.get(github_raw_file_url)
-with open(local_file_path, 'wb') as file:
-  file.write(response.content)
-print("Model loaded successfully!")
-
-model = YOLO(local_file_path)
+model = YOLO('captcha_model.pt')
 app = FastAPI()
 
 @app.get("/")
