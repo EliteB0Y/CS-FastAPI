@@ -5,10 +5,8 @@ import requests
 from PIL import Image
 import io
 
-# model = YOLO('captcha_model.pt')
-
-github_raw_file_url = 'https://github.com/MehulKhanna/PokeGrinder/releases/download/v2.3/Solver1850.pt'
-local_file_path = 'Solver1850.pt'
+github_raw_file_url = 'https://github.com/EliteB0Y/CS-FastAPI/releases/download/Files/captcha_model.pt'
+local_file_path = 'captcha_model.pt'
 
 print("Getting the model from github...")
 response = requests.get(github_raw_file_url)
